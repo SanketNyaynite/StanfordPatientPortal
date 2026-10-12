@@ -1,0 +1,7 @@
+CAREVIEW DEMO — VISIT SUMMARY
+
+This is a fictional document for the Stanford Health Care assessment prototype.
+No real patient information is included.
+
+Visit type: General follow-up
+Follow-up: As directed by the treating clinician.
