@@ -1,3 +1,5 @@
+
+
 const $ = (id) => document.getElementById(id);
 
 let currentPatient = null;
@@ -84,9 +86,8 @@ $("logoutBtn").addEventListener("click", async () => {
     try {
         await api("/api/auth/logout", { method: "POST" });
     } catch {
-        // Continue logging out locally.
+        
     }
-
     currentPatient = null;
     showLogin();
 });
@@ -115,7 +116,6 @@ $("searchForm").addEventListener("submit", async (e) => {
         message("Enter at least one search criterion.");
         return;
     }
-
     clearMessage();
     await searchPatients(params);
 });
@@ -128,7 +128,7 @@ $("clearBtn").addEventListener("click", () => {
     <div class="empty-state">
                 <div class="empty-icon">⌕</div>
                 <strong>Search the patient directory</strong>
-                <p>Enter an MRN, name, or date of birth to find a record.</p>
+                <p>Enter an MRN, name or date of birth to find a record.</p>
             </div > `;
     }, 0);
 });
@@ -152,8 +152,8 @@ async function searchPatients(filters) {
             $("resultsArea").innerHTML = `
     <div class="empty-state">
                     <div class="empty-icon">⌕</div>
-                    <strong>No matching patients</strong>
-                    <p>Check the spelling or try a different identifier.</p>
+                    <strong>No matching patients found</strong>
+                    <p>Check spelling or try different identifier.</p>
                 </div > `;
             return;
         }
@@ -429,6 +429,8 @@ host.innerHTML =
         `/api/patients/${p.patientId}/documents`
     );
 
+        
+
     host.innerHTML = card(
         "Patient documents",
         docs.map((x) => `
@@ -550,7 +552,7 @@ $("printBtn").addEventListener("click", async () => {
             </head>
             <body>
                 <h1>Patient Summary</h1>
-                <p>Generated ${new Date().toLocaleString()} · Demo data only</p>
+                <p>Generated ${new Date().toLocaleString()}</p>
 
                 <h2>Demographics</h2>
                 <div class="grid">
@@ -622,8 +624,7 @@ $("printBtn").addEventListener("click", async () => {
                 </table>
 
                 <p class="disclaimer">
-                    CareView assessment prototype. Fictional records only.
-                    Not for clinical decision-making.
+                    CarePoint assessment
                 </p>
 
                 <script>
@@ -638,5 +639,4 @@ $("printBtn").addEventListener("click", async () => {
         message(err.message);
     }
 });
-
 checkSession();

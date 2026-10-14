@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600"><rect width="900" height="600" fill="#edf6f7"/><rect x="60" y="55" width="780" height="490" rx="22" fill="#fff" stroke="#c8dfe2" stroke-width="3"/><circle cx="450" cy="215" r="82" fill="#d5ecee"/><circle cx="450" cy="190" r="34" fill="#2b8188"/><path d="M385 280c8-55 122-55 130 0" fill="#2b8188"/><text x="450" y="370" font-family="Arial" font-size="30" text-anchor="middle" fill="#153b56" font-weight="bold">Patient information placeholder</text><text x="450" y="420" font-family="Arial" font-size="20" text-anchor="middle" fill="#64748b">Fictional illustration for demo use only</text><text x="450" y="470" font-family="Arial" font-size="16" text-anchor="middle" fill="#64748b">CareView · Assessment prototype</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+	<rect width="900" height="600" fill="#edf6f7"/>
+	<rect x="60" y="55" width="780" height="490" rx="22" fill="#fff" stroke="#c8dfe2" stroke-width="3"/>
+	<circle cx="450" cy="215" r="82" fill="#d5ecee"/>
+	<circle cx="450" cy="190" r="34" fill="#2b8188"/>
+	<path d="M385 280c8-55 122-55 130 0" fill="#2b8188"/>
+	<text x="450" y="370" font-family="Arial" font-size="30" text-anchor="middle" fill="#153b56" font-weight="bold">Patient information placeholder</text>
+	<text x="450" y="420" font-family="Arial" font-size="20" text-anchor="middle" fill="#64748b">Dummy data for demo use</text>
+	<text x="450" y="470" font-family="Arial" font-size="16" text-anchor="middle" fill="#64748b">CarePoint · Assessment</text>
+</svg>

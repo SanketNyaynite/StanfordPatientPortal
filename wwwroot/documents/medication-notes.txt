@@ -1,4 +1,4 @@
-CAREVIEW DEMO — MEDICATION NOTES
+CAREPOINT DEMO — MEDICATION NOTES
 
-Fictional demonstration document. Not medical advice.
+Dummy demonstration document. Not medical record.
 Confirm all medication instructions with the responsible clinician.

@@ -68,7 +68,7 @@ app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Initialize the database and seed demo data.
+// Initialize the database and seed demo data
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -221,13 +221,12 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-// Authentication endpoints.
+// Authentication endpoints
 app.MapPost(
     "/api/auth/login",
     async (HttpContext context, LoginRequest request) =>
     {
-        // Assessment demo only: replace with ASP.NET Core Identity
-        // or enterprise SSO before production.
+        // For assessment demo purpose only
         var configuredUser =
             app.Configuration["DemoAuth:Username"]
             ?? "demo@stanford.test";
@@ -280,7 +279,7 @@ app.MapGet(
         Results.Ok(new { user = user.Identity?.Name })
 ).RequireAuthorization();
 
-// Patient search endpoint.
+// Patient search endpoint
 app.MapGet(
     "/api/patients/search",
     async (
@@ -335,7 +334,7 @@ app.MapGet(
     }
 ).RequireAuthorization();
 
-// Individual patient endpoint.
+// Individual patient endpoint
 app.MapGet(
     "/api/patients/{id:int}",
     async (int id, AppDbContext db) =>
@@ -350,7 +349,7 @@ app.MapGet(
     }
 ).RequireAuthorization();
 
-// Allergy endpoint.
+// Allergy endpoint
 app.MapGet(
     "/api/patients/{id:int}/allergies",
     async (int id, AppDbContext db) =>
@@ -363,7 +362,7 @@ app.MapGet(
         )
 ).RequireAuthorization();
 
-// Patient alerts endpoint.
+// Patient alerts endpoint
 app.MapGet(
     "/api/patients/{id:int}/alerts",
     async (int id, AppDbContext db) =>
@@ -376,7 +375,7 @@ app.MapGet(
         )
 ).RequireAuthorization();
 
-// Medication endpoint.
+// Medication endpoint
 app.MapGet(
     "/api/patients/{id:int}/medications",
     async (int id, AppDbContext db) =>
@@ -389,7 +388,7 @@ app.MapGet(
         )
 ).RequireAuthorization();
 
-// Patient documents endpoint.
+// Patient documents endpoint
 app.MapGet(
     "/api/patients/{id:int}/documents",
     async (int id, AppDbContext db) =>

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>CareView | Patient Portal</title>
+    <title>CarePoint | Patient Portal</title>
 
     <link rel="stylesheet" href="/css/site.css">
 </head>
@@ -16,13 +16,13 @@
             <div class="brand">
                 <span class="brand-mark">+</span>
                 <div>
-                    <strong>CareView</strong>
+                    <strong>CarePoint</strong>
                     <small>Clinical information workspace</small>
                 </div>
             </div>
 
             <h1>Sign in</h1>
-            <p class="muted">Access the patient information demo.</p>
+            <p class="muted">Access the patient information demo</p>
 
             <form id="loginForm">
                 <label>
@@ -31,7 +31,7 @@
                            type="email"
                            autocomplete="username"
                            required
-                           value="demo@stanford.test">
+                           value="user@stanford.com">
                 </label>
 
                 <label>
@@ -40,51 +40,42 @@
                            type="password"
                            autocomplete="current-password"
                            required
-                           value="StanfordDemo!2026">
+                           value="Stanford@2026">
                 </label>
 
                 <button class="primary full" type="submit">
-                    Sign in securely
+                    Sign in
                 </button>
 
                 <p id="loginError" class="error" role="alert"></p>
             </form>
-
-            <div class="demo-note">
-                Demo environment · Fictional patient records only
-            </div>
         </section>
     </div>
 
     <div id="appScreen" class="app hidden">
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="brand light">
                 <span class="brand-mark">+</span>
-                <div>
-                    <strong>CareView</strong>
+                <div class="brand-text">
+                    <strong>CarePoint</strong>
                     <small>Clinical workspace</small>
                 </div>
             </div>
 
             <div class="nav-label">WORKSPACE</div>
 
-            <button class="nav-item active" id="navSearch">
-                ▦
-                <span>Patient search</span>
+            <button class="nav-item active" id="navSearch" type="button">
+                ▦ <span>Patient info</span>
             </button>
 
             <div class="sidebar-bottom">
                 <div class="user-dot">CV</div>
-
                 <div class="user-meta">
                     <strong>Clinical Viewer</strong>
                     <small id="signedInAs">Demo user</small>
                 </div>
-
-                <button id="logoutBtn"
-                        class="logout"
-                        title="Sign out">
-                    ↪
+                <button id="logoutBtn" class="logout" title="Logout" type="button">
+                    &gt;
                 </button>
             </div>
         </aside>
@@ -92,13 +83,7 @@
         <main class="main">
             <header class="topbar">
                 <div>
-                    <div class="eyebrow">CLINICAL SYSTEMS</div>
                     <h1>Patient workspace</h1>
-                </div>
-
-                <div class="secure-pill">
-                    <span></span>
-                    Secure demo session
                 </div>
             </header>
 
@@ -124,7 +109,7 @@
                         Medical record number (MRN)
                         <input id="mrn"
                                maxlength="20"
-                               placeholder="e.g. MRN100245">
+                               placeholder="MRN100245">
                     </label>
 
                     <label>
@@ -148,7 +133,7 @@
 
                     <div class="search-actions">
                         <button class="primary" type="submit">
-                            Search patients
+                            Search
                         </button>
 
                         <button class="secondary"
@@ -164,7 +149,7 @@
                         <div class="empty-icon">⌕</div>
                         <strong>Search the patient directory</strong>
                         <p>
-                            Enter an MRN, name, or date of birth
+                            Enter an MRN, name or date of birth
                             to find a record.
                         </p>
                     </div>
@@ -188,8 +173,6 @@
                     </div>
 
                     <div class="banner-actions">
-                        <span class="record-status">● Demo record</span>
-
                         <button id="printBtn" class="primary">
                             Print summary / Save PDF
                         </button>
@@ -218,8 +201,7 @@
             </section>
 
             <footer>
-                CareView assessment prototype · Use fictional data only ·
-                Not for clinical decision-making
+                CarePoint assessment
             </footer>
         </main>
     </div>

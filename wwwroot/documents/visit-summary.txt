@@ -1,6 +1,6 @@
-CAREVIEW DEMO — VISIT SUMMARY
+CAREPOINT DEMO — VISIT SUMMARY
 
-This is a fictional document for the Stanford Health Care assessment prototype.
+This is a dummy document for the Stanford Health Care assessment.
 No real patient information is included.
 
 Visit type: General follow-up
